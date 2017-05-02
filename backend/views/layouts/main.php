@@ -25,17 +25,21 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
+<!--class 为wrap为标题栏 -->
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'BlogDemo 2',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => '文章管理', 'url' => ['/post/index']],
+            ['label' => '评论管理', 'url' => ['/comment/index']],
+            ['label' => '用户管理', 'url' => ['/user/index']],
+            ['label' => '管理员', 'url' => ['/adminuser/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -43,7 +47,7 @@ AppAsset::register($this);
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                '注销 (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
@@ -64,6 +68,14 @@ AppAsset::register($this);
         <?= $content ?>
     </div>
 </div>
+
+<!--class 为wrap为标题栏 -->
+
+<!--class 为wrap为标题栏 -->
+<!--  -->
+
+
+
 
 <footer class="footer">
     <div class="container">
