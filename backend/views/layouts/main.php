@@ -35,11 +35,17 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+    // headline 、special、download、upload
+
     $menuItems = [
             ['label' => '文章管理', 'url' => ['/post/index']],
             ['label' => '评论管理', 'url' => ['/comment/index']],
             ['label' => '用户管理', 'url' => ['/user/index']],
             ['label' => '管理员', 'url' => ['/adminuser/index']],
+            ['label' => '标题类目', 'url' => ['/headline/index']],
+            ['label' => '文章专题', 'url' => ['/special/index']],
+             ['label' => '工具上传', 'url' => ['/download/index']],
+            ['label' => '工具下载', 'url' => ['/upload/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
