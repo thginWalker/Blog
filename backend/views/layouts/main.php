@@ -29,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'BlogDemo 2',
+        'brandLabel' => '脚本黑客',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -44,7 +44,7 @@ AppAsset::register($this);
             ['label' => '管理员', 'url' => ['/adminuser/index']],
             ['label' => '标题类目', 'url' => ['/headline/index']],
             ['label' => '文章专题', 'url' => ['/special/index']],
-             ['label' => '工具上传', 'url' => ['/download/index']],
+            ['label' => '工具上传', 'url' => ['/download/index']],
             ['label' => '工具下载', 'url' => ['/upload/index']],
     ];
     if (Yii::$app->user->isGuest) {
@@ -85,7 +85,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; 小小博客 <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

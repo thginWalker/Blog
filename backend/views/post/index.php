@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\PostSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Posts';
+$this->title = '文章管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="post-index">
@@ -16,24 +16,43 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Post', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('新增文章', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'title',
-            'content:ntext',
-            'tags:ntext',
-            'flag',
-            // 'special',
-            // 'status',
-            // 'create_time:datetime',
-            // 'update_time:datetime',
-            // 'author_id',
+                 [
+                    'attribute'=>'title',
+                    'label'=>'标题'
+                ],
+                 [
+                    'attribute'=>'tags',
+                    'label'=>'标签'
+                ],
+                [
+                    'attribute'=>'flag',
+                    'label'=>'类目'
+                ],
+                [
+                    'attribute'=>'special',
+                    'label'=>'专题'
+                ],
+                [
+                    'attribute'=>'special',
+                    'label'=>'专题'
+                ],
+                [
+                    'attribute'=>'create_time',
+                    'label'=>'创建时间',
+                      'format'=>['date','php:Y-m-d H:i:s'],
+                ],
+                 [
+                    'attribute'=>'update_time',
+                    'label'=>'修改时间',
+                      'format'=>['date','php:Y-m-d H:i:s'],
+                ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

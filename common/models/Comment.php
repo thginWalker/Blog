@@ -54,14 +54,14 @@ class Comment extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'content' => 'Content',
-            'status' => 'Status',
-            'create_time' => 'Create Time',
-            'userid' => 'Userid',
-            'email' => 'Email',
-            'url' => 'Url',
-            'post_id' => 'Post ID',
-            'remind' => 'Remind',
+            'content' => '内容',
+            'status' => '状态',
+            'create_time' => '评论时间',
+            'userid' => '评论用户',
+            'email' => '邮箱',
+            'url' => '链接',
+            'post_id' => '文章作者',
+            'remind' => '备注',
         ];
     }
 
