@@ -29,6 +29,20 @@ class AdminuserController extends Controller
         ];
     }
 
+
+        /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => '用户名',
+            'nickname' => '昵称',
+            'email' => '邮箱',
+        ];
+    }
+
     /**
      * Lists all Adminuser models.
      * @return mixed

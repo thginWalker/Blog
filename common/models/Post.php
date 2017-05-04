@@ -3,7 +3,7 @@
 namespace common\models;
 
 use Yii;
-
+use common\models\Headline;
 /**
  * This is the model class for table "post".
  *
@@ -89,4 +89,14 @@ class Post extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Poststatus::className(), ['id' => 'status']);
     }
+
+    /**
+     * 获取类目
+     * @return [type] [description]
+     */
+    public function getFlag()
+    {
+        return $this->hasOne(Headline::className(), ['Id' => 'flag']);
+    }
+
 }

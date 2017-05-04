@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('新增用户', ['create'], ['class' => 'btn btn-success']) ?>
+        <?php // Html::a('新增用户', ['create'], ['class' => 'btn btn-success']); ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -26,13 +26,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'username',
-            'auth_key',
-            'password_hash',
-            'password_reset_token',
-            // 'email:email',
-            // 'status',
+            // 'auth_key',
+            // 'password_hash',
+            // 'password_reset_token',
+            'email:email',
+            'status',
             // 'created_at',
-            // 'updated_at',
+            'updated_at',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
